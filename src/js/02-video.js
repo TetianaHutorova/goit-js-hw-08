@@ -4,7 +4,6 @@ const throttle = require('lodash.throttle');
 
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
-
 player.on(
   'timeupdate',
   throttle(function (evt) {
@@ -13,7 +12,7 @@ player.on(
 );
 
 player
-  .setCurrentTime(localStorage.getItem(common.LS))
+  .setCurrentTime(localStorage.getItem(common.LSVIDEO))
   .then(function (seconds) {})
   .catch(function (error) {
     switch (error.name) {

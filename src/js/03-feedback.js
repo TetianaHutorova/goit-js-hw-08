@@ -2,7 +2,6 @@ import common from '../common.json';
 const throttle = require('lodash.throttle');
 
 const form = document.querySelector('.feedback-form');
-
 form.addEventListener('input', throttle(handlerForm, 500));
 form.addEventListener('submit', handlerSubmit);
 
